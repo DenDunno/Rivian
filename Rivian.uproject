@@ -19,7 +19,7 @@
 			]
 		},
 		{
-			"Name": "SceneViewExtensionTemplate",
+			"Name": "EdgeDetection",
 			"Enabled": true
 		}
 	],
