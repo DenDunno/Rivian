@@ -8,27 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35919e8f-8b69-4452-a8f3-0cb4f0b0d25b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MainScene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainScene.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/SceneViewExtensionTemplate/SceneViewExtensionTemplate.uplugin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/SceneViewExtensionTemplate/Shaders/PostProcessCS.usf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/SceneViewExtensionTemplate/Source/SceneViewExtensionTemplate/Private/CustomSceneViewExtension.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/SceneViewExtensionTemplate/Source/SceneViewExtensionTemplate/Private/CustomSceneViewExtension.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/SceneViewExtensionTemplate/Source/SceneViewExtensionTemplate/Private/SceneViewExtensionTemplate.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/SceneViewExtensionTemplate/Source/SceneViewExtensionTemplate/Private/TemplateSubsystem.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/SceneViewExtensionTemplate/Source/SceneViewExtensionTemplate/Private/TemplateSubsystem.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/SceneViewExtensionTemplate/Source/SceneViewExtensionTemplate/Public/SceneViewExtensionTemplate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/SceneViewExtensionTemplate/Source/SceneViewExtensionTemplate/SceneViewExtensionTemplate.Build.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rivian.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Rivian.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Rivian/EdgeDetection/EdgeDetectionExtension.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Rivian/EdgeDetection/EdgeDetectionExtension.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Rivian/EdgeDetection/EdgeDetectionSubsystem.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Rivian/EdgeDetection/EdgeDetectionSubsystem.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Rivian/Rivian.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Rivian/Rivian.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/EdgeDetection.uplugin" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/EdgeDetection.uplugin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/EdgeDetection.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/EdgeDetection.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionModule.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionModule.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +25,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Plugins/EdgeDetection/EdgeDetection.uplugin" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/EdgeDetection.Build.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionModule.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Public/EdgeDetectionModule.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Rivian/Rivian.Build.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/Experimental/ColorCorrectRegions/Shaders/Private/ColorCorrectRegionsCommon.usf" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/Experimental/ColorCorrectRegions/Shaders/Private/ColorCorrectRegionsScreenPass.usf" root0="SKIP_HIGHLIGHTING" />
@@ -69,6 +62,9 @@
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/AIModule/Private/BehaviorTree/Tasks/BTTask_PlayAnimation.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/AppFramework/Public/Widgets/Colors/SColorPicker.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Concepts/Iterable.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Containers/Array.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Logging/LogMacros.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Misc/AssertionMacros.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Serialization/CustomVersion.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/CoreUObject/Internal/UObject/CoreRedirects/CoreRedirectsContext.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Classes/Components/AudioComponent.h" root0="FORCE_HIGHLIGHTING" />
@@ -78,7 +74,10 @@
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Private/SceneViewExtension.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Public/SceneViewExtension.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/MovieSceneTracks/Public/Tracks/MovieSceneEventTrack.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Projects/Public/Interfaces/IPluginManager.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Renderer/Internal/PostProcess/PostProcessInputs.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Renderer/Private/FogRendering.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Renderer/Private/MeshDrawCommands.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/TypedElementFramework/Public/Elements/Framework/TypedElementAttributeBindingProperty.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -194,7 +193,7 @@
       <updated>1752814942049</updated>
       <workItem from="1752814942805" duration="16035000" />
       <workItem from="1752971474751" duration="1647000" />
-      <workItem from="1753037866871" duration="7776000" />
+      <workItem from="1753037866871" duration="14489000" />
     </task>
     <servers />
   </component>

@@ -13,7 +13,6 @@ void UEdgeDetectionSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 void UEdgeDetectionSubsystem::Deinitialize()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Subsystem DEINITIALIZED"));
-	
 	Super::Deinitialize();
 
 	CustomSceneViewExtension.Reset();
