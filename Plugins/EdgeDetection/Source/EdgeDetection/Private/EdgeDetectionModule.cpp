@@ -6,7 +6,11 @@ void FEdgeDetectionModule::StartupModule()
 {
 	UE_LOG(LogTemp, Warning, TEXT("EDGE DETECTION MODULE STARTUP"));
 	FString PluginShaderDirectory = FPaths::Combine(IPluginManager::Get().FindPlugin(TEXT("EdgeDetection"))->GetBaseDir(), TEXT("Shaders"));
-	AddShaderSourceDirectoryMapping(TEXT("/Plugins/EdgeDetection"), PluginShaderDirectory);
+
+	if(!AllShaderSourceDirectoryMappings().Contains(TEXT("/Plugins/EdgeDetection")))
+	{
+		AddShaderSourceDirectoryMapping(TEXT("/Plugins/EdgeDetection"), PluginShaderDirectory);
+	}
 }
 
 void FEdgeDetectionModule::ShutdownModule()

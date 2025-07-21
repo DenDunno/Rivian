@@ -3,10 +3,12 @@
 #include "/Engine/Private/ScreenPass.ush"
 
 Texture2D SceneColorTexture;
+Texture2D WorldNormalTexture;
 
 float4 MainPS(float4 SvPosition : SV_POSITION) : SV_Target0
 {
 	const float4 sceneColor = SceneColorTexture.Load(int3(SvPosition.xy, 0));
+	const float4 worldNormal = WorldNormalTexture.Load(int3(SvPosition.xy, 0));
 	
-	return sceneColor * float4(1,0,0,1);
+	return sceneColor + worldNormal * 0.3;
 }
