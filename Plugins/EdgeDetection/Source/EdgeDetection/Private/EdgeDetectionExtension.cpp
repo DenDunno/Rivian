@@ -6,6 +6,7 @@
 #include "SceneTexturesConfig.h"
 #include "CoreMinimal.h"
 #include "DataDrivenShaderPlatformInfo.h"
+#include "EdgeDetectionSettings.h"
 #include "SceneRendering.h"
 #include "Runtime/Renderer/Internal/PostProcess/PostProcessInputs.h"
 
@@ -13,7 +14,9 @@ DECLARE_GPU_DRAWCALL_STAT(EdgeDetection);
 IMPLEMENT_GLOBAL_SHADER(FEdgeDetectionShader, "/Plugins/EdgeDetection/EdgeDetection.usf", "MainPS", SF_Pixel);
 IMPLEMENT_GLOBAL_SHADER(FNormalDepthTextureMergingShader, "/Plugins/EdgeDetection/NormalDepthTextureMerging.usf", "MainPS", SF_Pixel);
 
-void DetectEdges(FRDGBuilder& GraphBuilder, const FSceneView& View, const FPostProcessingInputs& Inputs, const FIntRect& Viewport, const FGlobalShaderMap* GlobalShaderMap, const FScreenPassTexture& NormalDepthTexture)
+void DetectEdges(FRDGBuilder& GraphBuilder, const FSceneView& View, const FPostProcessingInputs& Inputs,
+	const FIntRect& Viewport, const FGlobalShaderMap* GlobalShaderMap, const FScreenPassTexture& NormalDepthTexture,
+	const UEdgeDetectionSettings* settings)
 {
 	const FScreenPassTexture SceneColorTexture((*Inputs.SceneTextures)->SceneColorTexture, Viewport);
 	
@@ -23,6 +26,11 @@ void DetectEdges(FRDGBuilder& GraphBuilder, const FSceneView& View, const FPostP
 	Parameters->WorldNormalTextureSampler = TStaticSamplerState<SF_Bilinear>::GetRHI();
 	Parameters->SceneColorTexture = SceneColorTexture.Texture;
 	Parameters->View = View.ViewUniformBuffer;
+	Parameters->EdgeSize = settings->EdgeSize;
+	Parameters->Threshold = settings->Threshold;
+	Parameters->EdgeColor = settings->Color;
+	Parameters->Feather = settings->Feather;
+	Parameters->ShowEdgesOnly = settings->ShowEdgesOnly;
 	Parameters->RenderTargets[0] = FRenderTargetBinding((*Inputs.SceneTextures)->SceneColorTexture, ERenderTargetLoadAction::ELoad);
 	
 	TShaderMapRef<FEdgeDetectionShader> PixelShader(GlobalShaderMap);
@@ -52,11 +60,15 @@ FScreenPassTexture MergeNormalAndDepthTextures(FRDGBuilder& GraphBuilder, const 
 
 EdgeDetectionExtension::EdgeDetectionExtension(const FAutoRegister& AutoRegister): FSceneViewExtensionBase(AutoRegister)
 {
+	EdgeDetectionSettings = GetDefault<UEdgeDetectionSettings>();
 }
 
 void EdgeDetectionExtension::PrePostProcessPass_RenderThread(FRDGBuilder& GraphBuilder, const FSceneView& View, const FPostProcessingInputs& Inputs)
 {
 	FSceneViewExtensionBase::PrePostProcessPass_RenderThread(GraphBuilder, View, Inputs);
+
+	if (EdgeDetectionSettings->Enabled == false)
+		return;
 	
 	checkSlow(View.bIsViewInfo);
 	const FIntRect Viewport = static_cast<const FViewInfo&>(View).ViewRect;
@@ -64,7 +76,7 @@ void EdgeDetectionExtension::PrePostProcessPass_RenderThread(FRDGBuilder& GraphB
 	
 	RDG_GPU_STAT_SCOPE(GraphBuilder, EdgeDetection); 
 	RDG_EVENT_SCOPE(GraphBuilder, "Edge detection");
-
+	
 	const FScreenPassTexture NormalDepthTexture = MergeNormalAndDepthTextures(GraphBuilder, View, Inputs, Viewport, GlobalShaderMap);
-	DetectEdges(GraphBuilder, View, Inputs, Viewport, GlobalShaderMap, NormalDepthTexture);
+	DetectEdges(GraphBuilder, View, Inputs, Viewport, GlobalShaderMap, NormalDepthTexture, EdgeDetectionSettings);
 }

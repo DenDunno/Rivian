@@ -47,7 +47,8 @@ public class EdgeDetection : ModuleRules
 				"Projects",
 				"RHI",
 				"Renderer",
-				"RenderCore"
+				"RenderCore",
+				"DeveloperSettings"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
