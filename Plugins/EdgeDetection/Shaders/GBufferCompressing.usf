@@ -1,0 +1,22 @@
+#include "/Engine/Public/Platform.ush"
+#include "NormalsEncoding.usf"
+Texture2D DepthTexture;
+Texture2D WorldNormalTexture;
+Texture2D BaseColorTexture;
+
+float ComputeLuminance(float3 color)
+{
+	return dot(color, float3(0.299f, 0.587f, 0.114f));
+}
+
+float4 MainPS(float4 SvPosition : SV_POSITION) : SV_Target0
+{
+	const float depth = DepthTexture.Load(int3(SvPosition.xy, 0)).r;
+	const float3 worldNormal = WorldNormalTexture.Load(int3(SvPosition.xy, 0)).rgb;
+	const float3 baseColor = BaseColorTexture.Load(int3(SvPosition.xy, 0)).rgb;
+	
+	const float2 encodedNormal = EncodeNormalOctahedron(worldNormal);
+	const float luminance = ComputeLuminance(baseColor);
+	
+	return float4(encodedNormal, luminance, depth);
+}

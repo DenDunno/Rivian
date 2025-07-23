@@ -1,0 +1,20 @@
+
+float2 EncodeNormalOctahedron(float3 n)
+{
+	n /= abs(n.x) + abs(n.y) + abs(n.z);
+	float2 enc = float2(n.x, n.y);
+	if (n.z < 0.0)
+		enc = float2((1.0 - abs(enc.y)) * (enc.x >= 0 ? 1 : -1),
+					 (1.0 - abs(enc.x)) * (enc.y >= 0 ? 1 : -1));
+	return enc * 0.5 + 0.5;
+}
+
+float3 DecodeNormalOctahedron(float2 e)
+{
+	e = e * 2.0 - 1.0;
+	float3 n = float3(e.x, e.y, 1.0 - abs(e.x) - abs(e.y));
+	if (n.z < 0.0)
+		n.xy = float2((1.0 - abs(n.y)) * (n.x >= 0 ? 1 : -1),
+					  (1.0 - abs(n.x)) * (n.y >= 0 ? 1 : -1));
+	return normalize(n);
+}

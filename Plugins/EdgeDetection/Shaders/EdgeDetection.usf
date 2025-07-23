@@ -1,5 +1,6 @@
 #include "/Engine/Public/Platform.ush"
 #include "/Engine/Private/Common.ush"
+#include "NormalsEncoding.usf"
 
 float EdgeSize;
 float Threshold;
@@ -7,8 +8,8 @@ float Feather;
 int ShowEdgesOnly;
 float4 EdgeColor;
 Texture2D SceneColorTexture;
-Texture2D WorldNormalTexture;
-SamplerState WorldNormalTextureSampler;
+Texture2D CompressedGBuffer;
+SamplerState CompressedGBufferSampler;
 
 static const float2 SobelSamplePoints[9] = {
 	float2(-1, 1), float2(0, 1), float2(1, 1),
@@ -30,29 +31,34 @@ static const float SobelYMatrix[9] = {
 
 float SobelFilter(Texture2D textureInput, SamplerState samplerState, float2 uv, float2 texelSize)
 {
-	float2 sobelR = 0;
-	float2 sobelG = 0;
-	float2 sobelB = 0;
-	float2 sobelA = 0;
+	float2 worldNormalR = 0;
+	float2 worldNormalG = 0;
+	float2 worldNormalB = 0;
+	float2 luminance = 0;
+	float2 depth = 0;
 
 	[unroll] for (int i = 0; i < 9; i++) {
 		float4 value = textureInput.Sample(samplerState, uv + SobelSamplePoints[i] * texelSize);
-		float2 kernel = float2(SobelXMatrix[i], SobelYMatrix[i]);
+		float3 worldNormal = DecodeNormalOctahedron(value.rg);
+		float sceneLuminance = value.b;
+		float sceneDepth = value.a;
 		
-		sobelR += value.r * kernel;
-		sobelG += value.g * kernel;
-		sobelB += value.b * kernel;
-		sobelA += value.a * kernel;
+		float2 kernel = float2(SobelXMatrix[i], SobelYMatrix[i]);
+		worldNormalR += worldNormal.r * kernel;
+		worldNormalG += worldNormal.g * kernel;
+		worldNormalB += worldNormal.b * kernel;
+		luminance += sceneLuminance * kernel;
+		depth += sceneDepth * kernel;
 	}
 	
-	return max(max(length(sobelR), max(length(sobelG), length(sobelB))), length(sobelA));
+	return max(max(max(length(worldNormalR), max(length(worldNormalG), length(worldNormalB))), length(depth)), length(luminance));
 }
 
 float4 ComputeEdge(float2 svPosition) {
 	const float2 uv = svPosition * View.BufferSizeAndInvSize.zw;
 	const float2 texelSize = View.BufferSizeAndInvSize.zw * EdgeSize;
 	
-	float edge = SobelFilter(WorldNormalTexture, WorldNormalTextureSampler, uv, texelSize);
+	float edge = SobelFilter(CompressedGBuffer, CompressedGBufferSampler, uv, texelSize);
 	return smoothstep(Threshold - Feather, Threshold, edge) * EdgeColor;
 }
 
