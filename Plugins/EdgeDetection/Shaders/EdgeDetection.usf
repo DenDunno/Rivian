@@ -1,6 +1,6 @@
 #include "/Engine/Public/Platform.ush"
 #include "/Engine/Private/Common.ush"
-#include "NormalsEncoding.usf"
+#include "Utils.usf"
 
 float EdgeSize;
 float Threshold;

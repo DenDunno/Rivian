@@ -18,3 +18,8 @@ float3 DecodeNormalOctahedron(float2 e)
 					  (1.0 - abs(n.x)) * (n.y >= 0 ? 1 : -1));
 	return normalize(n);
 }
+
+float ComputeLuminance(float3 color)
+{
+	return dot(color, float3(0.299f, 0.587f, 0.114f));
+}

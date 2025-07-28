@@ -8,12 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35919e8f-8b69-4452-a8f3-0cb4f0b0d25b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/Utils.usf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/CelShading/CelShadingSettings.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CarModel/windowglass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CarModel/windowglass.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/MainScene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainScene.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PP_CelShading.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PP_CelShading.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/EdgeDetection.usf" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/EdgeDetection.usf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/GBufferCompressing.usf" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/GBufferCompressing.usf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/NormalsEncoding.usf" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/CelShading.usf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionExtension.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionExtension.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionModule.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionModule.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSettings.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetection/EdgeDetectionSettings.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionSubsystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionSubsystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rivian.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Rivian.uproject" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +109,7 @@
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Public/SceneTexturesConfig.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Public/SceneView.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Public/SceneViewExtension.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Experimental/Chaos/Public/Chaos/Collision/MeshContactGenerator.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/MovieSceneTracks/Public/Tracks/MovieSceneEventTrack.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Projects/Public/Interfaces/IPluginManager.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/RHI/Private/RHI.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -236,7 +247,7 @@
       <workItem from="1753253379081" duration="2115000" />
       <workItem from="1753423706380" duration="4635000" />
       <workItem from="1753647785162" duration="668000" />
-      <workItem from="1753665635185" duration="1203000" />
+      <workItem from="1753665635185" duration="8476000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,31 @@
+#include "/Engine/Public/Platform.ush"
+#include "Utils.usf"
+Texture2D DepthTexture;
+Texture2D SceneColorTexture;
+Texture2D BaseColorTexture;
+float ShadowBias;
+float ShadowContrast;
+float Brightness;
+float4 TintShadow;
+float4 TintHighlight;
+
+float4 ClipSkybox(float3 color, float3 sceneColor, float2 svPosition)
+{
+	const float depth = DepthTexture.Load(int3(svPosition, 0)).r;
+	const float3 finalColor = depth > 0 ? color : sceneColor; 
+	return float4(finalColor, 1);
+}
+
+float4 MainPS(float4 SvPosition : SV_POSITION) : SV_Target0
+{
+	const float3 sceneColor = SceneColorTexture.Load(int3(SvPosition.xy, 0));
+	const float3 baseColor = BaseColorTexture.Load(int3(SvPosition.xy, 0));
+	
+	const float sceneColorLuminance = ComputeLuminance(sceneColor);
+	const float baseColorLuminance = ComputeLuminance(baseColor);
+	const float sceneLightning = saturate(sceneColorLuminance / baseColorLuminance);
+	const float stylizedSceneLightning = saturate((sceneLightning - ShadowBias) * ShadowContrast);
+
+	const float3 toonColor = lerp(baseColor * TintShadow.xyz, baseColor * TintHighlight.xyz, stylizedSceneLightning) * Brightness;
+	return ClipSkybox(toonColor, sceneColor, SvPosition);
+}

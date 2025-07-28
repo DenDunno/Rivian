@@ -1,18 +1,17 @@
 #include "EdgeDetectionExtension.h"
-
 #include "PixelShaderUtils.h"
 #include "RenderGraphEvent.h"
 #include "SceneRenderTargetParameters.h"
 #include "SceneTexturesConfig.h"
 #include "CoreMinimal.h"
 #include "DataDrivenShaderPlatformInfo.h"
-#include "EdgeDetectionSettings.h"
 #include "SceneRendering.h"
 #include "Runtime/Renderer/Internal/PostProcess/PostProcessInputs.h"
 
 DECLARE_GPU_DRAWCALL_STAT(EdgeDetection);
 IMPLEMENT_GLOBAL_SHADER(FEdgeDetectionShader, "/Plugins/EdgeDetection/EdgeDetection.usf", "MainPS", SF_Pixel);
 IMPLEMENT_GLOBAL_SHADER(FGBufferCompressingShader, "/Plugins/EdgeDetection/GBufferCompressing.usf", "MainPS", SF_Pixel);
+IMPLEMENT_GLOBAL_SHADER(FGCelShadingShader, "/Plugins/EdgeDetection/CelShading.usf", "MainPS", SF_Pixel);
 
 void DetectEdges(FRDGBuilder& GraphBuilder, const FSceneView& View, const FPostProcessingInputs& Inputs,
 	const FIntRect& Viewport, const FGlobalShaderMap* GlobalShaderMap, const FScreenPassTexture& CompressedGBuffer,
@@ -60,25 +59,52 @@ FScreenPassTexture CompressGBuffer(FRDGBuilder& GraphBuilder, const FSceneView& 
 	return FScreenPassTexture(CompressedGBuffer, Viewport);
 }
 
+void CelShade(FRDGBuilder& GraphBuilder, const FSceneView& View, const FPostProcessingInputs& Inputs,
+	const FIntRect& Viewport, const FGlobalShaderMap* GlobalShaderMap, const UCelShadingSettings* settings)
+{
+	const FScreenPassTexture SceneColorTexture((*Inputs.SceneTextures)->SceneColorTexture, Viewport);
+	const FScreenPassTexture BaseColorTexture((*Inputs.SceneTextures)->GBufferCTexture, Viewport);
+	const FScreenPassTexture DepthTexture((*Inputs.SceneTextures)->SceneDepthTexture, Viewport);
+	
+	FGCelShadingShader::FParameters* Parameters = GraphBuilder.AllocParameters<FGCelShadingShader::FParameters>();
+	Parameters->SceneTextures = CreateSceneTextureShaderParameters(GraphBuilder, View, ESceneTextureSetupMode::SceneColor | ESceneTextureSetupMode::GBuffers);;
+	Parameters->SceneColorTexture = SceneColorTexture.Texture;
+	Parameters->BaseColorTexture = BaseColorTexture.Texture;
+	Parameters->DepthTexture = DepthTexture.Texture;
+	Parameters->ShadowBias = settings->ShadowBias;
+	Parameters->ShadowContrast = settings->ShadowContrast;
+	Parameters->TintShadow = settings->TintShadow;
+	Parameters->TintHighlight = settings->TintHighlight;
+	Parameters->Brightness = settings->Brightness;
+	Parameters->View = View.ViewUniformBuffer;
+	Parameters->RenderTargets[0] = FRenderTargetBinding((*Inputs.SceneTextures)->SceneColorTexture, ERenderTargetLoadAction::ELoad);
+	
+	TShaderMapRef<FGCelShadingShader> PixelShader(GlobalShaderMap);
+	FPixelShaderUtils::AddFullscreenPass(GraphBuilder, GlobalShaderMap, FRDGEventName(TEXT("Cel shading")), PixelShader, Parameters, Viewport);
+}
+
 EdgeDetectionExtension::EdgeDetectionExtension(const FAutoRegister& AutoRegister): FSceneViewExtensionBase(AutoRegister)
 {
 	EdgeDetectionSettings = GetDefault<UEdgeDetectionSettings>();
+	CelShadingSettings = GetDefault<UCelShadingSettings>();
 }
 
 void EdgeDetectionExtension::PrePostProcessPass_RenderThread(FRDGBuilder& GraphBuilder, const FSceneView& View, const FPostProcessingInputs& Inputs)
 {
 	FSceneViewExtensionBase::PrePostProcessPass_RenderThread(GraphBuilder, View, Inputs);
-
-	if (EdgeDetectionSettings->Enabled == false)
-		return;
 	
 	checkSlow(View.bIsViewInfo);
 	const FIntRect Viewport = static_cast<const FViewInfo&>(View).ViewRect;
 	const FGlobalShaderMap* GlobalShaderMap = GetGlobalShaderMap(GMaxRHIFeatureLevel);
-	
-	RDG_GPU_STAT_SCOPE(GraphBuilder, EdgeDetection); 
-	RDG_EVENT_SCOPE(GraphBuilder, "Edge detection");
-	
-	const FScreenPassTexture CompressedGBuffer = CompressGBuffer(GraphBuilder, View, Inputs, Viewport, GlobalShaderMap);
-	DetectEdges(GraphBuilder, View, Inputs, Viewport, GlobalShaderMap, CompressedGBuffer, EdgeDetectionSettings);
+
+	if (CelShadingSettings->Enabled)
+	{
+		CelShade(GraphBuilder, View, Inputs, Viewport, GlobalShaderMap, CelShadingSettings);	
+	}
+
+	if (EdgeDetectionSettings->Enabled)
+	{
+		const FScreenPassTexture CompressedGBuffer = CompressGBuffer(GraphBuilder, View, Inputs, Viewport, GlobalShaderMap);
+		DetectEdges(GraphBuilder, View, Inputs, Viewport, GlobalShaderMap, CompressedGBuffer, EdgeDetectionSettings);	
+	}
 }

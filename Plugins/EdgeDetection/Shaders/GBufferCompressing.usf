@@ -1,13 +1,8 @@
 #include "/Engine/Public/Platform.ush"
-#include "NormalsEncoding.usf"
+#include "Utils.usf"
 Texture2D DepthTexture;
 Texture2D WorldNormalTexture;
 Texture2D BaseColorTexture;
-
-float ComputeLuminance(float3 color)
-{
-	return dot(color, float3(0.299f, 0.587f, 0.114f));
-}
 
 float4 MainPS(float4 SvPosition : SV_POSITION) : SV_Target0
 {
