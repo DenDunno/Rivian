@@ -8,14 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35919e8f-8b69-4452-a8f3-0cb4f0b0d25b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/NormalsEncoding.usf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/EdgeDetection.usf" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/EdgeDetection.usf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/NormalDepthTextureMerging.usf" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/GBufferCompressing.usf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSettings.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSettings.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CarModel/windowglass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CarModel/windowglass.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/MainScene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainScene.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +33,10 @@
     <setting file="file://$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Public/EdgeDetectionModule.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Rivian/Rivian.Build.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../UnrealEngine/UnrealEngine/Engine/Saved/ShaderDebugInfo/METAL_SM5/Global/FVisualizeShadingModelPS/0/VisualizeShadingModels.orig.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../UnrealEngine/UnrealEngine/Engine/Saved/ShaderDebugInfo/METAL_SM5/Global/FVisualizeShadingModelPS/0/VisualizeShadingModels.usf" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../UnrealEngine/UnrealEngine/Engine/Shaders/Private/DeferredShadingCommon.ush" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../UnrealEngine/UnrealEngine/Engine/Shaders/Private/ShadingCommon.ush" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/Experimental/ColorCorrectRegions/Shaders/Private/ColorCorrectRegionsCommon.usf" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/Experimental/ColorCorrectRegions/Shaders/Private/ColorCorrectRegionsScreenPass.usf" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/Experimental/ColorCorrectRegions/Shaders/Private/ColorCorrectRegionsShader.usf" root0="SKIP_HIGHLIGHTING" />
@@ -42,6 +44,7 @@
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/Experimental/ColorCorrectRegions/Source/ColorCorrectRegionsEditor/ColorCorrectRegionsEditor.Build.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/Experimental/SVGImporter/Source/SVGImporter/SVGImporter.Build.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/FastBuildController/Source/Private/FastBuildUtilities.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/Importers/USDImporter/Source/USDSchemas/USDSchemas.Build.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/MovieScene/TemplateSequence/Source/TemplateSequence/Private/TemplateSequenceModule.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/MovieScene/TemplateSequence/Source/TemplateSequenceEditor/Private/TemplateSequenceEditorModule.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Plugins/Runtime/Database/SQLiteCore/Source/SQLiteCore/Private/sqlite/sqlite3.inl" root0="SKIP_HIGHLIGHTING" />
@@ -50,6 +53,7 @@
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Developer/Apple/MetalShaderFormat/Private/MetalShaderFormat.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Developer/BlankModule/BlankModule.Build.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Developer/GraphColor/Private/graphColorVertices.private.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Developer/ShaderPreprocessor/Private/ShaderPreprocessor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Developer/ShaderPreprocessor/Private/stb_preprocess/preprocessor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Developer/TraceServices/Private/Analyzers/ModuleAnalysis.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Developer/TraceServices/Private/Model/ModuleProvider.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -66,7 +70,9 @@
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Editor/PropertyEditor/Private/UserInterface/PropertyTable/ColumnWidgetFactory.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Editor/Sequencer/Public/SequencerChannelInterface.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Editor/UnrealEd/Classes/Builders/EditorBrushBuilder.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Editor/UnrealEd/Classes/MaterialGraph/MaterialGraph.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Editor/UnrealEd/Private/Dialogs/Dialogs.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Editor/UnrealEd/Private/MaterialGraph.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Editor/UnrealEd/Private/UnrealEdPrivatePCH.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Editor/UnrealEd/Private/VolumeTexturePreview.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Editor/UnrealEd/Public/DiffUtils.h" root0="FORCE_HIGHLIGHTING" />
@@ -80,12 +86,16 @@
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Public/Serialization/CustomVersion.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Core/Tests/Misc/TimespanTest.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/CoreUObject/Internal/UObject/CoreRedirects/CoreRedirectsContext.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/CoreUObject/Public/UObject/ObjectMacros.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/DeveloperSettings/DeveloperSettings.Build.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Classes/Components/AudioComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Classes/Engine/Scene.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Private/Materials/MaterialExpressions.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Private/Materials/MaterialShared.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Private/SceneView.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Private/SceneViewExtension.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Private/ShaderCompiler/ShaderGenerationUtil.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Public/MaterialShared.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Public/SceneTexturesConfig.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Public/SceneView.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Shared/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Public/SceneViewExtension.h" root0="FORCE_HIGHLIGHTING" />
@@ -224,6 +234,9 @@
       <workItem from="1753056117135" duration="30805000" />
       <workItem from="1753220443724" duration="3621000" />
       <workItem from="1753253379081" duration="2115000" />
+      <workItem from="1753423706380" duration="4635000" />
+      <workItem from="1753647785162" duration="668000" />
+      <workItem from="1753665635185" duration="1203000" />
     </task>
     <servers />
   </component>
