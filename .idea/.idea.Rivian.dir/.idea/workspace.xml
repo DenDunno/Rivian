@@ -8,22 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35919e8f-8b69-4452-a8f3-0cb4f0b0d25b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/Utils.usf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/CelShading/CelShadingSettings.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Config/DefaultEdgeDetection.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/CelShading/CelShadingRenderPass.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/CelShading/CelShadingRenderPass.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/Core/IRenderPass.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/Core/SceneViewExtensionRenderPass.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/Core/SceneViewExtensionRenderPass.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetection/EdgeDetectionRenderPass.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetection/EdgeDetectionRenderPass.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rivian.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MainScene.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainScene.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PP_CelShading.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PP_CelShading.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/EdgeDetection.usf" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/EdgeDetection.usf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/GBufferCompressing.usf" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/GBufferCompressing.usf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/NormalsEncoding.usf" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Shaders/CelShading.usf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionExtension.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionExtension.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionExtension.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionModule.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionModule.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSettings.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetection/EdgeDetectionSettings.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionSubsystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/EdgeDetectionSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionSubsystem.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rivian.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Rivian.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionExtension.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionExtension.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionModule.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/Core/RenderPassesModule.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionSubsystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/Core/RenderPassesSubsystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/RenderFlow/EdgeDetectionSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Private/Core/RenderPassesSubsystem.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Public/EdgeDetectionModule.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/EdgeDetection/Source/EdgeDetection/Public/RenderPassesModule.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +247,7 @@
       <workItem from="1753253379081" duration="2115000" />
       <workItem from="1753423706380" duration="4635000" />
       <workItem from="1753647785162" duration="668000" />
-      <workItem from="1753665635185" duration="8476000" />
+      <workItem from="1753665635185" duration="11754000" />
     </task>
     <servers />
   </component>

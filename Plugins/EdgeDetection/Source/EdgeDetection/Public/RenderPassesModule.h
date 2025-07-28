@@ -1,7 +1,7 @@
 #pragma once
 #include "Modules/ModuleManager.h"
 
-class FEdgeDetectionModule : public IModuleInterface
+class FRenderPassesModule : public IModuleInterface
 {
 public:
 	virtual void StartupModule() override;

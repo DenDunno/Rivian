@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Subsystems/EngineSubsystem.h"
-#include "EdgeDetectionSubsystem.generated.h"
+#include "RenderPassesSubsystem.generated.h"
 
 UCLASS()
-class UEdgeDetectionSubsystem : public UEngineSubsystem
+class URenderPassesSubsystem : public UEngineSubsystem
 {
 	GENERATED_BODY()
 public:
 	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 	virtual void Deinitialize() override;
 private:
-	TSharedPtr<class EdgeDetectionExtension> CustomSceneViewExtension;
+	TSharedPtr<class SceneViewExtensionRenderPass> CustomSceneViewExtension;
 };

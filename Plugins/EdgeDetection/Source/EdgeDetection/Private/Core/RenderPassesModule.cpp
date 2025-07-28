@@ -1,8 +1,8 @@
-#include "EdgeDetectionModule.h"
+#include "RenderPassesModule.h"
 #include "Interfaces/IPluginManager.h"
 #define LOCTEXT_NAMESPACE "FEdgeDetectionModule"
 
-void FEdgeDetectionModule::StartupModule()
+void FRenderPassesModule::StartupModule()
 {
 	UE_LOG(LogTemp, Warning, TEXT("EDGE DETECTION MODULE STARTUP"));
 	FString PluginShaderDirectory = FPaths::Combine(IPluginManager::Get().FindPlugin(TEXT("EdgeDetection"))->GetBaseDir(), TEXT("Shaders"));
@@ -13,10 +13,10 @@ void FEdgeDetectionModule::StartupModule()
 	}
 }
 
-void FEdgeDetectionModule::ShutdownModule()
+void FRenderPassesModule::ShutdownModule()
 {
 	UE_LOG(LogTemp, Warning, TEXT("EDGE DETECTION MODULE SHUTDOWN"));
 }
 
 #undef LOCTEXT_NAMESPACE
-IMPLEMENT_MODULE(FEdgeDetectionModule, EdgeDetection)
+IMPLEMENT_MODULE(FRenderPassesModule, EdgeDetection)
